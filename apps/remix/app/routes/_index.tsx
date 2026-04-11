@@ -48,5 +48,5 @@ export async function loader({ request }: Route.LoaderArgs) {
     throw redirect(formatDocumentsPath(currentTeam.url));
   }
 
-  throw redirect('/signin');
+  throw redirect('https://www.verafirma.com');
 }
