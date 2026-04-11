@@ -27,6 +27,6 @@ export const createLocalSigner = async () => {
   const p12 = loadP12();
 
   return await P12Signer.create(p12, env('NEXT_PRIVATE_SIGNING_PASSPHRASE') || '', {
-    buildChain: true,
+    buildChain: false,
   });
 };
