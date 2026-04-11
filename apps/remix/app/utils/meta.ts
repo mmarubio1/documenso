@@ -4,11 +4,11 @@ import { NEXT_PUBLIC_WEBAPP_URL } from '@documenso/lib/constants/app';
 
 export const appMetaTags = (title?: MessageDescriptor) => {
   const description =
-    'Join Documenso, the open signing infrastructure, and get a 10x better signing experience. Pricing starts at $30/mo. forever! Sign in now and enjoy a faster, smarter, and more beautiful document signing process. Integrates with your favorite tools, customizable, and expandable. Support our mission and become a part of our open-source community.';
+    'Verafirma is a high-throughput eSignature API for developers and AI agents. Send legally binding documents for signature in one API call. Pay $0.10 per envelope. No subscription required.';
 
   return [
     {
-      title: title ? `${i18n._(title)} - Documenso` : 'Documenso',
+      title: title ? `${i18n._(title)} - Verafirma` : 'Verafirma',
     },
     {
       name: 'description',
@@ -17,19 +17,19 @@ export const appMetaTags = (title?: MessageDescriptor) => {
     {
       name: 'keywords',
       content:
-        'Documenso, open source, DocuSign alternative, document signing, open signing infrastructure, open-source community, fast signing, beautiful signing, smart templates',
+        'Verafirma, eSignature API, document signing, electronic signatures, developer API, AI agents, x402, crypto payments',
     },
     {
       name: 'author',
-      content: 'Documenso, Inc.',
+      content: 'Verafirma',
     },
     {
       name: 'robots',
-      content: 'index, follow',
+      content: 'noindex, nofollow',
     },
     {
       property: 'og:title',
-      content: 'Documenso - The Open Source DocuSign Alternative',
+      content: 'Verafirma - eSignature API for Developers and AI Agents',
     },
     {
       property: 'og:description',
@@ -49,7 +49,7 @@ export const appMetaTags = (title?: MessageDescriptor) => {
     },
     {
       name: 'twitter:site',
-      content: '@documenso',
+      content: '@verafirma',
     },
     {
       name: 'twitter:description',
