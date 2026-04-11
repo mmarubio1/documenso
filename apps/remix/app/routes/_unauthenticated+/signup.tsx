@@ -20,15 +20,17 @@ export function meta() {
 
 export function loader({ request }: Route.LoaderArgs) {
   const NEXT_PUBLIC_DISABLE_SIGNUP = env('NEXT_PUBLIC_DISABLE_SIGNUP');
+  const NEXT_PUBLIC_ALLOW_SIGNUP = env('NEXT_PUBLIC_ALLOW_SIGNUP');
+
+  // Redirect to Verafirma if signup is disabled
+  if (NEXT_PUBLIC_DISABLE_SIGNUP === 'true' || NEXT_PUBLIC_ALLOW_SIGNUP === 'false') {
+    throw redirect('https://www.verafirma.com');
+  }
 
   // SSR env variables.
   const isGoogleSSOEnabled = IS_GOOGLE_SSO_ENABLED;
   const isMicrosoftSSOEnabled = IS_MICROSOFT_SSO_ENABLED;
   const isOIDCSSOEnabled = IS_OIDC_SSO_ENABLED;
-
-  if (NEXT_PUBLIC_DISABLE_SIGNUP === 'true') {
-    throw redirect('/signin');
-  }
 
   let returnTo = new URL(request.url).searchParams.get('returnTo') ?? undefined;
 

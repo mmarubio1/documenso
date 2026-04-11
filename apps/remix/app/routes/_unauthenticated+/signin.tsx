@@ -103,19 +103,7 @@ export default function SignIn({ loaderData }: Route.ComponentProps) {
           returnTo={returnTo}
         />
 
-        {!isEmbeddedRedirect && env('NEXT_PUBLIC_DISABLE_SIGNUP') !== 'true' && (
-          <p className="mt-6 text-center text-sm text-muted-foreground">
-            <Trans>
-              Don't have an account?{' '}
-              <Link
-                to={returnTo ? `/signup?returnTo=${encodeURIComponent(returnTo)}` : '/signup'}
-                className="text-documenso-700 duration-200 hover:opacity-70"
-              >
-                Sign up
-              </Link>
-            </Trans>
-          </p>
-        )}
+        
       </div>
     </div>
   );
